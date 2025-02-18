@@ -2,9 +2,9 @@ def check_divisibility(num):
   # // Expected output is "TRUE" or "FALSE"
 
   if num % 5 == 0:
-    print("TRUE")
+    return True
   else:
-    print("FALSE")  
+    return False
 
 num = int(input("Enter a number: "))
 print(check_divisibility(num))
