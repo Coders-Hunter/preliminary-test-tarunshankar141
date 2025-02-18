@@ -26,7 +26,7 @@ jobs:
         with:
           test-name: Divisibility by 5 Test
           command: "./c/test_divisible_by_5.sh"
-          input: 10
+          input: "10"
           expected-output: "TRUE"
           comparison-method: exact
           timeout: 10
@@ -65,9 +65,9 @@ jobs:
       - name: Autograding Reporter
         uses: classroom-resources/autograding-grading-reporter@v1
         env:
-          DIVISIBILITY-TEST_RESULTS: "${{steps.divisibility-test.outputs.result}}"
-          SUM-TEST_RESULTS: "${{steps.sum-test.outputs.result}}"
-          PYTHON-DIVISIBILITY-TEST_RESULTS: "${{steps.python-divisibility-test.outputs.result}}"
-          PYTHON-SUM-TEST_RESULTS: "${{steps.python-sum-test.outputs.result}}"
+          DIVISIBILITY-TEST_RESULTS: "${{ steps.divisibility-test.outputs.result }}"
+          SUM-TEST_RESULTS: "${{ steps.sum-test.outputs.result }}"
+          PYTHON-DIVISIBILITY-TEST_RESULTS: "${{ steps.python-divisibility-test.outputs.result }}"
+          PYTHON-SUM-TEST_RESULTS: "${{ steps.python-sum-test.outputs.result }}"
         with:
- 
+          runners: divisibility-test, sum-test, python-divisibility-test, python-sum-test
