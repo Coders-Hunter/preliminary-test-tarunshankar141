@@ -11,7 +11,7 @@ def test_divisibility():
     print("Captured Errors:", repr(process.stderr))
 
     assert process.returncode == 0, "Script encountered an error"
-    assert "Divisible by 5" in process.stdout.strip(), "Test Failed"
+    assert "TRUE" in process.stdout.strip(), "Test Failed"
 
 test_divisibility()
 print("Python Test for Divisibility Passed")
